@@ -1,0 +1,109 @@
+<html>
+  <head>
+    <title>hace tu brat</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="main-wrapper">
+      <div id="content">
+        <div id="memeContainer">
+          <img id="memeImage" src="brat.png" alt="Brat" />
+          <div id="textOverlay"></div>
+        </div>
+        <input type="text" id="textInput" value="brat" />
+        <label for="friedLevel">más crasheado</label>
+        <input
+          type="range"
+          min="70"
+          max="99"
+          value="85"
+          class="slider"
+          id="friedLevel"
+        />
+        <div id="toggleButton" onclick="toggleColor()"></div>
+      </div>
+    </div>
+    <footer>
+      <p>
+        hecho con 🫶🏻 por <a href="https://instagr.am/andres.sebast">@andres.sebast</a>. los derechos pertenecen a sus respectivos propietarios. en
+        caso de que se esté infringiendo algún copyright, por
+        favor <a href="https://instagr.am/andres.sebast">contactame</a>.
+      </p>
+    </footer>
+    <style>
+      @font-face {
+        font-family: 'arial_narrowregular';
+        src: url('arrialnarrow.ttf') format('truetype');
+      }
+      @font-face {
+        font-family: 'Arial Narrow';
+        src: url('arrialnarrow.ttf') format('truetype');
+      }
+
+      body.green #textInput {
+        border-width: 0px;
+      }
+
+      body.green #page,
+      body.green #main-wrapper,
+      body.green #textOverlay {
+        background-color: #8acf00;
+      }
+
+      #memeImage {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      #textOverlay {
+        z-index: 2;
+        color: #000000;
+        font-weight: 500;
+        font-family: arial_narrowregular, 'Arial Narrow', sans-serif;
+        font-size: 280px;
+        /* filter: blur(2px); */
+        font-size: 100px;
+        text-align: justify;
+        text-align-last: justify;
+        height: 500px;
+        padding: 0px !important;
+        padding-bottom: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      div#textOverlay span.textFitted {
+        font-weight: 500;
+        font-family: arial_narrowregular, 'Arial Narrow', sans-serif;
+        font-size: 100px;
+      }
+
+      /* Estilo global para texto y campos de texto */
+      body,
+      input,
+      label {
+        font-family: 'Arial Narrow', Arial, sans-serif;
+      }
+
+      a {
+        color: #000000
+      }
+
+      a:hover {
+        color: #427000
+      }
+
+      
+    </style>
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+    <script src="https://libraries.wmgartistservices.com/jslibrary/jquery.min.js"></script>
+    <script src="textFit.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>
+
+<!-- Todos los derechos de autor pertenecen a sus respectivos propietarios. En caso de que se considere que se ha infringido algún derecho de autor, por favor contáctenos.-->

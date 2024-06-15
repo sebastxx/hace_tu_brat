@@ -2,7 +2,7 @@ const textInput = document.getElementById('textInput');
 const numInput = document.getElementById('friedLevel');
 const textOverlay = document.getElementById('textOverlay');
 // textOverlay.innerText = textInput.value;
-const memeImage = document.getElementById('memeImage');
+const bratButPic = document.getElementById('bratButPic');
 
 textInput.addEventListener('input', function () {
   const fryLevel = document.getElementById('friedLevel').value;
@@ -11,7 +11,7 @@ textInput.addEventListener('input', function () {
   textOverlay.style.textAlign = 'justify';
   textOverlay.style.textAlignLast = 'justify';
   textFit(textOverlay, { maxFontSize: 170 });
-  // memeImage.style.display = 'none';
+  // bratButPic.style.display = 'none';
   downloadImg(1 - fryLevel / 100);
 });
 
@@ -31,7 +31,7 @@ numInput.addEventListener('input', function () {
     textOverlay.style.display = 'block';
     textFit(textOverlay, { maxFontSize: 170 });
   }
-  // memeImage.style.display = 'none';
+  // bratButPic.style.display = 'none';
   downloadImg(1 - num / 100);
 });
 
@@ -59,8 +59,8 @@ const downloadImg = (fryLevel) => {
     document.body.removeChild(clone);
     var link = document.createElement('a');
     link.href = dataURL;
-    memeImage.src = dataURL;
-    memeImage.style.display = 'block';
+    bratButPic.src = dataURL;
+    bratButPic.style.display = 'block';
 
     link.download = `brat.jpeg`;
     // document.body.appendChild(link);
@@ -87,18 +87,18 @@ function queryState() {
 function setupTheme(color) {
   var body = document.getElementsByTagName('body')[0];
   var button = document.getElementById('toggleButton');
-  const memeImage = document.getElementById('memeImage');
+  const bratButPic = document.getElementById('bratButPic');
   //
   if (color === 'white') {
     body.classList.remove('green');
     body.classList.add('white');
     button.style.backgroundColor = '#8ACF00';
-    memeImage.src = '/brat-deluxe.png';
+    bratButPic.src = '/brat-deluxe.png';
   } else {
     body.classList.remove('white');
     body.classList.add('green');
     button.style.backgroundColor = 'white';
-    memeImage.src = '/brat.png';
+    bratButPic.src = '/brat.png';
   }
 }
 
